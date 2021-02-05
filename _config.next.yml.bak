@@ -143,7 +143,7 @@ site_state: true
 social:
   GitHub: https://github.com/bmyjacks || fab fa-github
   E-Mail: mailto:bmyjacks@bmyjacks.io || fa fa-envelope
-  RSS: /atom.xml || fa fa-rss
+  #RSS: /atom.xml || fa fa-rss
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -360,8 +360,8 @@ codeblock:
   # Code Highlight theme
   # All available themes: https://theme-next.js.org/highlight/
   theme:
-    light: default
-    dark: tomorrow-night
+    light: zenburn
+    dark: zenburn
   prism:
     light: prism-material-oceanic
     dark: prism-material-oceanic
@@ -459,6 +459,9 @@ font:
 # See: https://theme-next.js.org/docs/theme-settings/seo
 # ---------------------------------------------------------------
 
+# Disable Baidu transformation on mobile devices.
+disable_baidu_transformation: true
+
 # If true, site-subtitle will be added to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
 index_with_subtitle: true
@@ -482,6 +485,9 @@ yandex_site_verification:
 # See: https://ziyuan.baidu.com/site
 baidu_site_verification:
 
+# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
+baidu_push: false
+
 
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
@@ -501,12 +507,10 @@ math:
   every_page: false
 
   mathjax:
-    enable: false
-    # Available values: none | ams | all
-    tags: none
+    enable: true
 
   katex:
-    enable: true
+    enable: false
     # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
     copy_tex: false
 
@@ -530,7 +534,7 @@ lazyload: true
 # Pangu Support
 # For more information: https://github.com/vinta/pangu.js
 # Server-side plugin: https://github.com/next-theme/hexo-pangu
-pangu: tru
+pangu: true
 
 # Quicklink Support
 # For more information: https://getquick.link
@@ -627,8 +631,8 @@ gitalk:
 # Utterances
 # For more information: https://utteranc.es
 utterances:
-  enable: false
-  repo: # Github repository name
+  enable: true
+  repo: bmyjacks/www-bmyjacks-cn # Github repository name
   # Available values: pathname | url | title | og:title
   issue_term: pathname
   # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
@@ -648,7 +652,7 @@ isso: # <data_isso>
 # To get your ID visit https://widgetpack.com
 rating:
   enable: false
-  id:     # <app_id>
+  id: 23310
   color:  "#fc6423"
 
 # AddThis Share. See: https://www.addthis.com
@@ -662,7 +666,6 @@ add_this_id:
 # ---------------------------------------------------------------
 
 # Google Analytics
-# See: https://analytics.google.com
 google_analytics:
   tracking_id: G-NNT6Z2PHMF # <app_id>
   # By default, NexT will load an external gtag.js script on your site.
@@ -670,16 +673,13 @@ google_analytics:
   only_pageview: false
 
 # Baidu Analytics
-# See: https://tongji.baidu.com
 baidu_analytics: # <app_id>
 
 # Growingio Analytics
-# See: https://www.growingio.com
 growingio_analytics: # <project_id>
 
-# Cloudflare Web Analytics
-# See: https://www.cloudflare.com/web-analytics/
-cloudflare_analytics:
+# CNZZ count
+cnzz_siteid:
 
 # Show number of visitors of each article.
 # You can visit https://www.leancloud.cn to get AppID and AppKey.
@@ -704,7 +704,7 @@ firestore:
   projectId: # Required
 
 # Show Views / Visitors of the website / page with busuanzi.
-# For more information: http://ibruce.info/2015/04/04/busuanzi/
+# Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   enable: true
   total_visitors: true
@@ -741,6 +741,9 @@ local_search:
   # Preload the search data when the page loads.
   preload: false
 
+# Swiftype Search API Key
+swiftype_key:
+
 
 # ---------------------------------------------------------------
 # Chat Services
@@ -748,7 +751,7 @@ local_search:
 # ---------------------------------------------------------------
 
 # Chatra Support
-# For more information: https://chatra.com
+# See: https://chatra.com
 # Dashboard: https://app.chatra.io/settings/general
 chatra:
   enable: false
@@ -757,7 +760,7 @@ chatra:
   #embed: # Unfinished experimental feature for developers. See: https://chatra.com/help/api/#injectto
 
 # Tidio Support
-# For more information: https://www.tidio.com
+# See: https://www.tidio.com
 # Dashboard: https://www.tidio.com/panel/dashboard
 tidio:
   enable: false
@@ -769,18 +772,18 @@ tidio:
 # See: https://theme-next.js.org/docs/tag-plugins/
 # ---------------------------------------------------------------
 
-# Note tag (bootstrap callout)
+# Note tag (bs-callout)
 note:
   # Note tag style values:
-  #  - simple    bootstrap callout old alert style. Default.
-  #  - modern    bootstrap callout new (v2-v3) alert style.
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
   style: modern
   icons: true
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.
-  light_bg_offset: 0
+  light_bg_offset: -12 | 12
 
 # Tabs tag
 tabs:
