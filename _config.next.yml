@@ -451,7 +451,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family: Encode Sans
+    family: PT Sans
 
 
 # ---------------------------------------------------------------
@@ -506,7 +506,7 @@ math:
     tags: none
 
   katex:
-    enable: false
+    enable: true
     # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
     copy_tex: false
 
@@ -566,7 +566,7 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
-  active:
+  active: gitalk
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: false
   # Lazyload all comment systems.
@@ -612,7 +612,7 @@ livere_uid: # <your_uid>
 # Gitalk
 # For more information: https://gitalk.github.io
 gitalk:
-  enable: false
+  enable: true
   github_id: # GitHub repo owner
   repo: # Repository name to store issues
   client_id: # GitHub Application Client ID
