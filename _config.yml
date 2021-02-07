@@ -4,9 +4,12 @@
 
 # Site
 title: bmyjacks blog
-subtitle: 'the box of ideas'
-description: ''
+subtitle: 'The box of ideas'
+description: 'the box of ideas'
 keywords:
+  - 博客
+  - 信息竞赛
+  - 教程
 author: bmyjacks
 language: zh-CN
 timezone: 'Asia/Shanghai'
