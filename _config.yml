@@ -7,13 +7,10 @@ title: bmyjacks blog
 subtitle: 'The box of ideas'
 description: 'the box of ideas'
 keywords:
-  - 博客
-  - 信息竞赛
-  - 教程
 author: bmyjacks
 language: zh-CN
 timezone: 'Asia/Shanghai'
-email: bmyjacks@bmyjacks.io
+email: bmyjacks@outlook.com
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
@@ -140,20 +137,3 @@ feed:
   type: atom
   path: atom.xml
   limit: 50
-
-
-neat_enable: true
-neat_html:
-  enable: false
-  exclude:
-neat_css:
-  enable: true
-  exclude:
-    - '*.min.css'
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - '*.min.js'
