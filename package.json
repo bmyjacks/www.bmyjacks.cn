@@ -32,8 +32,5 @@
     "prism-themes": "^1.5.0"
   },
   "devDependencies": {
-    "cryptiles": "^4.1.3",
-    "request": "^2.88.2",
-    "hoek": "^6.1.3"
   }
 }
