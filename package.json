@@ -22,6 +22,7 @@
     "hexo-generator-searchdb": "^1.3.3",
     "hexo-generator-sitemap": "^2.1.0",
     "hexo-generator-tag": "^1.0.0",
+    "hexo-pangu": "^0.2.0",
     "hexo-related-popular-posts": "^5.0.1",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-markdown-it-plus": "^1.0.4",
@@ -31,6 +32,5 @@
     "hexo-word-counter": "0.0.3",
     "prism-themes": "^1.5.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
