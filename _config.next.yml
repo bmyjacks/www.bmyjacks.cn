@@ -21,7 +21,7 @@ minify: true
 custom_file_path:
   head: source/_data/head.njk
   #header: source/_data/header.njk
-  #sidebar: source/_data/sidebar.njk
+  sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
   #postBodyEnd: source/_data/post-body-end.njk
   #footer: source/_data/footer.njk
@@ -85,11 +85,12 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  #schedule: /schedule/ || fa fa-calendar
+  schedule: https://trello.com/b/bH6s4jT0 || fa fa-calendar
   sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/index.html || fa fa-heartbeat
   International site: https://www.bmyjacks.com/ || fa fa-sitemap
   RSS: /atom.xml || fa fa-rss
+  服务状态: https://status.bmyjacks.io/ || fas fa-check
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -127,7 +128,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: /favicon/apple-touch-icon-144x144-precomposed.webp
+  url: /favicon/favicon.webp
   # If true, the avatar will be dispalyed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
@@ -143,7 +144,6 @@ site_state: true
 social:
   GitHub: https://github.com/bmyjacks || fab fa-github
   E-Mail: mailto:bmyjacks@outlook.com || fa fa-envelope
-  RSS: /atom.xml || fa fa-rss
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -180,7 +180,7 @@ toc:
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: false
   # Maximum heading depth of generated toc.
-  max_depth: 3
+  max_depth: 6
 
 # A button to open designated chat widget in sidebar.
 # Firstly, you need enable the chat service you want to activate its sidebar button.
@@ -287,7 +287,7 @@ follow_me:
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
   enable: true
-  title: 推荐文章
+  title: 向您推荐的文章
   display_in_home: false
   params:
     maxCount: 5
@@ -465,6 +465,8 @@ index_with_subtitle: true
 
 # Automatically add external URL with Base64 encrypt & decrypt.
 exturl: true
+# If true, an icon will be attached to each external URL
+exturl_icon: true
 
 # Google Webmaster tools verification.
 # See: https://developers.google.com/search
@@ -613,12 +615,14 @@ livere_uid: # <your_uid>
 # For more information: https://gitalk.github.io
 gitalk:
   enable: true
-  github_id: bmyjacks # GitHub repo owner
-  repo: www-bmyjacks-cn # Repository name to store issues
-  client_id: 8e13121e3bec94153e5a # GitHub Application Client ID
-  client_secret: 22d84df724318f6cf0a4b86bd2505012d9e0cbf5  # GitHub Application Client Secret
-  admin_user: bmyjacks # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  github_id: bmyjacks
+  repo: www-bmyjacks-cn
+  client_id: 8e13121e3bec94153e5a
+  client_secret: 22d84df724318f6cf0a4b86bd2505012d9e0cbf5
+  admin_user: bmyjacks
   distraction_free_mode: true # Facebook-like distraction free mode
+  # When the official proxy is not available, you can change it to your own proxy address
+  proxy: https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token # This is official proxy adress
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
@@ -664,7 +668,7 @@ add_this_id:
 # Google Analytics
 # See: https://analytics.google.com
 google_analytics:
-  tracking_id: G-NNT6Z2PHMF # <app_id>
+  tracking_id: G-NNT6Z2PHMF
   # By default, NexT will load an external gtag.js script on your site.
   # If you only need the pageview feature, set the following option to true to get a better performance.
   only_pageview: false
@@ -849,7 +853,7 @@ vendors:
   # The CDN provider of NexT internal scripts.
   # Available values: local | jsdelivr | unpkg | cdnjs
   # Warning: If you are using the latest master branch of NexT, please set `internal: local`
-  internal: jsdelivr
+  internal: local
   # The default CDN provider of third-party plugins.
   # Available values: local | jsdelivr | unpkg | cdnjs
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins

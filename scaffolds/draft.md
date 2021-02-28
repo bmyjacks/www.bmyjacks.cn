@@ -10,4 +10,5 @@ categories:
 hide: false
 comments: true
 mathjax: false
+sitemap: true
 ---
