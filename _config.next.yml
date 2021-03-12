@@ -19,7 +19,7 @@ minify: true
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
-  head: source/_data/head.njk
+  #head: source/_data/head.njk
   #header: source/_data/header.njk
   #sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
@@ -684,6 +684,8 @@ growingio_analytics: # <project_id>
 # Cloudflare Web Analytics
 # See: https://www.cloudflare.com/web-analytics/
 cloudflare_analytics:
+
+microsoft_clarity: 5aukmr58d2
 
 # Show number of visitors of each article.
 # You can visit https://www.leancloud.cn to get AppID and AppKey.
