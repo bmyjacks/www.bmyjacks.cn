@@ -18,6 +18,7 @@ copyright: false
 ## 内容分类
 
 最新博文: [英伟达 Jetson Nano 常用命令及软件详解](https://www.bmyjacks.cn/2021/jetson-nano-apps/)
+做题记录: [总览](/categories/做题记录/)
 
 ## 有问题？
 
