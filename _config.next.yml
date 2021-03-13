@@ -19,7 +19,7 @@ minify: true
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
-  head: source/_data/head.njk
+  #head: source/_data/head.njk
   #header: source/_data/header.njk
   #sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
@@ -176,7 +176,7 @@ toc:
   # Automatically add list number to toc.
   number: true
   # If true, all words will placed on next lines if header width longer then sidebar width.
-  wrap: false
+  wrap: true
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: false
   # Maximum heading depth of generated toc.
@@ -217,7 +217,7 @@ footer:
   copyright:
 
   # Powered by Hexo & NexT
-  powered: false
+  powered: true
 
   # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
@@ -259,7 +259,7 @@ symbols_count_time:
   item_text_total: true
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: true
+tag_icon: false
 
 # Donate (Sponsor) settings
 # Front-matter variable (unsupport animation).
@@ -568,7 +568,7 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
-  active: gitalk
+  active:
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: false
   # Lazyload all comment systems.
@@ -614,19 +614,36 @@ livere_uid: # <your_uid>
 # Gitalk
 # For more information: https://gitalk.github.io
 gitalk:
-  enable: true
-  github_id: bmyjacks
-  repo: www-bmyjacks-cn
-  client_id: 8e13121e3bec94153e5a
-  client_secret: 22d84df724318f6cf0a4b86bd2505012d9e0cbf5
-  admin_user: bmyjacks
+  enable: false
+  github_id: 
+  repo: 
+  client_id: 
+  client_secret: 
+  admin_user: 
   distraction_free_mode: true # Facebook-like distraction free mode
   # When the official proxy is not available, you can change it to your own proxy address
-  proxy: https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token # This is official proxy adress
+  proxy: # This is official proxy adress
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language: zh-CN
+
+# Waline
+# For more information: https://waline.js.org, https://github.com/lizheming/waline
+waline:
+  enable: true
+  serverURL: https://comments.bmyjacks.io/ # Waline server address url
+  placeholder: 请输入您的宝贵见解 # Comment box placeholder
+  avatar: identicon # Gravatar style
+  avatarCDN: https://sdn.geekzu.org/avatar/
+  meta: [nick, mail] # Custom comment header
+  pageSize: 5 # Pagination size
+  lang: zh-cn # Language, available values: en, zh-cn
+  # Warning: Do not enable both `waline.visitor` and `leancloud_visitors`.
+  visitor: false # Article reading statistic
+  comment_count: true  # If false, comment count will only be displayed in post page, not in home page
+  requiredFields: [nick] # Set required fields: [nick] | [nick, mail]
+  libUrl: # Set custom library cdn url
 
 # Utterances
 # For more information: https://utteranc.es
@@ -684,6 +701,8 @@ growingio_analytics: # <project_id>
 # Cloudflare Web Analytics
 # See: https://www.cloudflare.com/web-analytics/
 cloudflare_analytics:
+
+microsoft_clarity: 5aukmr58d1
 
 # Show number of visitors of each article.
 # You can visit https://www.leancloud.cn to get AppID and AppKey.

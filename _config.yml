@@ -5,7 +5,7 @@
 # Site
 title: bmyjacks blog
 subtitle: 'The box of ideas'
-description: 'the box of ideas'
+description: '卑微的学生党，不卑微的想法'
 keywords:
 author: bmyjacks
 language: zh-CN
@@ -64,7 +64,7 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 5
+  per_page: 7
   order_by: -date
 
 # Category & Tag
